@@ -1,5 +1,8 @@
-function virarCarta(a){
-    alert('é a hora')
-    let cartaVirada = document.querySelector('.verso .hidden');
-    cartaVirada.classList.toggle('hidden');
+function virarCarta(essa){
+    let carta = essa;
+    let cartaVirada = essa.classList.toggle('virada');
+let frente = carta.querySelector('.front');
+let tras = carta.querySelector('.back');
+frente.classList.toggle('hidden');
+tras.classList.toggle('hidden');
 }

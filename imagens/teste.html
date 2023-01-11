@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+        }
+        .card{
+            width: 100px;
+            height: 140px;
+            background-color: #A7E9AF;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 5px;
+        }
+        img{
+            width: 80px;
+            height: 80px;
+        }
+        .hidden{
+            display: none;
+        } 
+        .virada{
+            border: 3px solid aqua;
+            box-sizing: border-box;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="card" onclick="virar(this)">
+        <div class="front">
+<img src="/imagens/back.png" alt="">
+        </div>
+        <div class="back hidden">
+<img src="https://art.pixilart.com/c602e3aaa3279da.png" alt="" class="flor">
+        </div>
+    </div>
+
+    <div class="card" onclick="virar(this)">
+        <div class="front">
+            <img src="/imagens/back.png" alt="">
+        </div>
+        <div class="back hidden">
+            <img src="https://i.pinimg.com/originals/bc/20/6e/bc206e165e40aab332c2de9c08bf0642.png" alt="" class="star">
+        </div>
+    </div>
+
+    <div class="card" onclick="virar(this)">
+        <div class="front">
+<img src="/imagens/back.png" alt="">
+        </div>
+        <div class="back hidden">
+<img src="https://art.pixilart.com/c602e3aaa3279da.png" alt="">
+        </div>
+    </div>
+    <div class="card" onclick="virar(this)">
+        <div class="front">
+            <img src="/imagens/back.png" alt="" class="flor">
+        </div>
+        <div class="back hidden">
+            <img src="https://i.pinimg.com/originals/bc/20/6e/bc206e165e40aab332c2de9c08bf0642.png" alt="" class="star">
+        </div>
+    </div>
+
+    <script>
+        let cartaVirada
+        function virarCarta(essa){
+            let carta = essa;
+            let cartaVirada = essa.classList.toggle('virada');
+let frente = carta.querySelector('.front');
+let tras = carta.querySelector('.back');
+frente.classList.toggle('hidden');
+tras.classList.toggle('hidden');
+        }
+    </script>
+</body>
+</html>
