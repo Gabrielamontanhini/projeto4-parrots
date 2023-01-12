@@ -53,11 +53,16 @@ let criarLi = () => {
 
         const gif = document.createElement('img');
 
+Li.setAttribute('data-test', 'card');
+
+
         papagaio.setAttribute("src", "./imagens/back.png");
+        papagaio.setAttribute('data-test','face-down-image');
 
         gif.setAttribute("src", `./imagens/${
             arrayParauso[i]
         }`)
+        gif.setAttribute('data-test','face-up-image');
 
         lista.appendChild(Li);
         Li.appendChild(frente);
