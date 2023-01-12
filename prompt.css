@@ -31,7 +31,7 @@
                 flex-wrap: wrap;
                 justify-content: space-between;
                 align-items: center;
-                width: 960px;
+                width: 865px;
                 height: 60vh;
                 Background-color: #eef9bf
             }
@@ -48,6 +48,10 @@
                 transition: all 400ms ease;
                 transform-style: preserve-3d;
             }
+/*li:hover{
+    transform: rotateY(180deg);
+}*/
+
             li div {
                 width: 117px;
                 height: 150px;

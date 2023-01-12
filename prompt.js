@@ -1,9 +1,6 @@
 const lista = document.querySelector('ul')
 let mensagem = prompt("Com quantas cartas quer jogar?");
 let numero = Number(mensagem);
-if (numero%2 !== 0){
-    prompt("Com quantas cartas quer jogar?")
-}
 
 const imagensVersonaOrdem = [
     'applecat.gif',
@@ -113,8 +110,6 @@ let criarLi = () => {
         if (pareou == false) {
             desvira()
         } else if( pareou == true){
-            primeiraCarta.removeAttribute("onclick");
-            segundaCarta.removeAttribute("onclick");
             primeiraCarta= undefined;
             segundaCarta=undefined;
         }

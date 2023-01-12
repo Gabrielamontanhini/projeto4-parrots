@@ -38,7 +38,7 @@
 <img src="/imagens/back.png" alt="">
         </div>
         <div class="back hidden">
-<img src="https://art.pixilart.com/c602e3aaa3279da.png" alt="" class="flor">
+<img src="/imagens/applecat.gif" alt="" class="flor">
         </div>
     </div>
 
@@ -47,7 +47,7 @@
             <img src="/imagens/back.png" alt="">
         </div>
         <div class="back hidden">
-            <img src="https://i.pinimg.com/originals/bc/20/6e/bc206e165e40aab332c2de9c08bf0642.png" alt="" class="star">
+            <img src="/imagens/bigfloppa.gif" alt="" class="star">
         </div>
     </div>
 
@@ -56,7 +56,7 @@
 <img src="/imagens/back.png" alt="">
         </div>
         <div class="back hidden">
-<img src="https://art.pixilart.com/c602e3aaa3279da.png" alt="">
+<img src="/imagens/cat.gif" alt="">
         </div>
     </div>
     <div class="card" onclick="virar(this)">
@@ -64,13 +64,41 @@
             <img src="/imagens/back.png" alt="" class="flor">
         </div>
         <div class="back hidden">
-            <img src="https://i.pinimg.com/originals/bc/20/6e/bc206e165e40aab332c2de9c08bf0642.png" alt="" class="star">
+            <img src="/imagens/maxwell-cat.gif" alt="" class="star">
+        </div>
+    </div>
+
+    <div class="card" onclick="virar(this)">
+        <div class="front">
+            <img src="/imagens/back.png" alt="" class="flor">
+        </div>
+        <div class="back hidden">
+            <img src="/imagens/cat-wow.gif" alt="" class="star">
+        </div>
+    </div>
+
+    <div class="card" onclick="virar(this)">
+        <div class="front">
+            <img src="/imagens/back.png" alt="" class="flor">
+        </div>
+        <div class="back hidden">
+            <img src="/imagens/memes-meme.gif" alt="" class="star">
+        </div>
+    </div>
+
+    <div class="card" onclick="virar(this)">
+        <div class="front">
+            <img src="/imagens/back.png" alt="" class="flor">
+        </div>
+        <div class="back hidden">
+            <img src="/imagens/cat-sniff.gif" alt="" class="star">
         </div>
     </div>
 
     <script>
-        let cartaVirada
-        function virarCarta(essa){
+
+
+        function virar(essa){
             let carta = essa;
             let cartaVirada = essa.classList.toggle('virada');
 let frente = carta.querySelector('.front');
@@ -78,6 +106,8 @@ let tras = carta.querySelector('.back');
 frente.classList.toggle('hidden');
 tras.classList.toggle('hidden');
         }
+
+
     </script>
 </body>
 </html>

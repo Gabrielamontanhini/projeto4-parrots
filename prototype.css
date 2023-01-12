@@ -1,0 +1,14 @@
+main{
+    width: 70vw;
+    height: 90vh;
+    background-color: rgb(254, 173, 246);
+    display: flex;
+}
+.card{
+    width: 100px;
+    height: 140px;
+    background-color: #A7E9AF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
