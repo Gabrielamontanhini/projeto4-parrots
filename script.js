@@ -1,7 +1,7 @@
 const lista = document.querySelector('ul')
 let mensagem = prompt("Com quantas cartas quer jogar?");
 let numero = Number(mensagem);
-if (numero < 4 || numero % 2 !== 0) {
+if (numero < 4 || numero % 2 !== 0 || numero > 14 ) {
     prompt("Com quantas cartas quer jogar?")
 }
 let contadorDejogadas = 0;
@@ -126,7 +126,7 @@ let criarLi = () => {
             if(arrayPares.length == a){
                 setTimeout(() =>{
                     alert(`Parabéns, você ganhou em ${contadorDejogadas} jogadas!!`)
-                }, 1000);
+                }, 500);
             }
         }
     }
