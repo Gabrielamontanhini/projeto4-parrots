@@ -1,9 +1,12 @@
 const lista = document.querySelector('ul')
 let mensagem = prompt("Com quantas cartas quer jogar?");
 let numero = Number(mensagem);
-if (numero%2 !== 0){
+if (numero < 4 || numero % 2 !== 0) {
     prompt("Com quantas cartas quer jogar?")
 }
+let contadorDejogadas = 0;
+
+let arrayPares = []
 
 const imagensVersonaOrdem = [
     'applecat.gif',
@@ -19,21 +22,17 @@ let imagensVerso = imagensVersonaOrdem.sort(() => Math.random() - 0.5);
 
 
 let a = (numero / 2);
-alert(a)
 
 let primeiraFila = []
 for (b = 0; b < a; b ++) {
     primeiraFila.push(imagensVerso[b]);
 }
-// console.log(primeiraFila);
 
 
 let segundaFila = primeiraFila.sort(() => Math.random() - 0.5);
 
-// console.log(segundaFila);
 
 let arrayTotal = primeiraFila.concat(segundaFila);
-// console.log(arrayTotal);
 
 let arrayParauso = arrayTotal.sort(() => Math.random() - 0.5);
 console.log(arrayParauso);
@@ -53,16 +52,16 @@ let criarLi = () => {
 
         const gif = document.createElement('img');
 
-Li.setAttribute('data-test', 'card');
+        Li.setAttribute('data-test', 'card');
 
 
         papagaio.setAttribute("src", "./imagens/back.png");
-        papagaio.setAttribute('data-test','face-down-image');
+        papagaio.setAttribute('data-test', 'face-down-image');
 
         gif.setAttribute("src", `./imagens/${
             arrayParauso[i]
         }`)
-        gif.setAttribute('data-test','face-up-image');
+        gif.setAttribute('data-test', 'face-up-image');
 
         lista.appendChild(Li);
         Li.appendChild(frente);
@@ -88,14 +87,15 @@ Li.setAttribute('data-test', 'card');
             essa.classList.add('revelar')
             essa.querySelector('.back').classList.remove('hidden');
             primeiraCarta = essa;
+            contadorDejogadas++
             return false;
         } else if (segundaCarta == undefined) {
             essa.classList.add('revelar')
             essa.querySelector('.back').classList.remove('hidden');
             segundaCarta = essa;
+            contadorDejogadas ++
         }
-        checarPares()
-
+        checarPares()   
     }
 
 
@@ -106,8 +106,8 @@ Li.setAttribute('data-test', 'card');
             segundaCarta.classList.remove('revelar');
             segundaCarta.querySelector('.back').classList.add('hidden');
 
-            primeiraCarta= undefined;
-            segundaCarta=undefined;
+            primeiraCarta = undefined;
+            segundaCarta = undefined;
         }, 1000);
 
     }
@@ -117,10 +117,19 @@ Li.setAttribute('data-test', 'card');
         console.log(pareou)
         if (pareou == false) {
             desvira()
-        } else if( pareou == true){
+        } else if (pareou == true) {
             primeiraCarta.removeAttribute("onclick");
             segundaCarta.removeAttribute("onclick");
-            primeiraCarta= undefined;
-            segundaCarta=undefined;
+            primeiraCarta = undefined;
+            segundaCarta = undefined;
+            arrayPares.push("Par!");
+            if(arrayPares.length == a){
+                setTimeout(() =>{
+                    alert(`Parabéns, você ganhou em ${contadorDejogadas} jogadas!!`)
+                }, 1000);
+            }
         }
     }
+
+
+    
